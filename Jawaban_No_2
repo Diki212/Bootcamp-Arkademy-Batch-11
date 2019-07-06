@@ -1,0 +1,42 @@
+
+if(isset($_POST['submit'])){
+	if (empty($_POST["email"])) {
+		$emailError = " * Email is required";
+	} else {
+		$email = test_input($_POST["email"]);
+// check Email Valid atau Tidak
+		if (!preg_match("/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]+){}$/",$email)) {
+			$emailError = " * Email harus ada simbol “@” ";
+		}
+	}
+	
+	if (empty($_POST["phone"])) {
+		$phoneError = " * Phone Number Is Required";
+	} else {
+		$phone = test_input($_POST["phone"]);		
+// check Phone Valid atau Tidak
+		if (!preg_match_all("/+62-?[0-9]{8-15}$/",$phone)) {
+			$phoneError = " * angka harus diawali “+62” "; 
+		}
+	}
+	
+	if (empty($_POST["username"])) {
+		$usernameError = " * Username is required";
+	} else {
+		$name = test_input($_POST["username"]);
+// check Username Valid atau Tidak
+		if (!preg_match("/^[a-zA-Z]{1}[a-zA-Z0-9]{5-9}$/",$username)) {
+			$usernameError = " * Hanya kombinasi huruf kecil, Huruf besar dan angka dengan panjang 5-9 karakter. Username tidak boleh diawali dengan angka"; 
+		}
+	}
+	
+	if (empty($_POST["password"])) {
+		$passError = " * Password is required";
+	} else {
+		$password = test_input($_POST["password"]);
+// check Password Valid atau Tidak
+		if (!preg_match("/^[@]{1}[a-zA-Z0-9_-#]{8}$/",$password)) {
+			$passError = " * Password kombinasi dari huruf kecil, huruf besar, angka, dan karakter spesial minimal satu simbol dan harus terdapat simbol “#”. Dengan panjang minimal 8 karakter"; 
+		}
+	}
+}
