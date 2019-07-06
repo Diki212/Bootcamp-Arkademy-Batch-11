@@ -1,0 +1,17 @@
+var obj = {};
+obj.name = 'Diki Ferdiansyah';
+obj.age = 21;
+obj.address = 'Ngimbang, Kabupaten lamongan 62273';
+obj.hobbies = ['Membaca','Coding','Travel'];
+obj.in_married = false;
+obj.list_school = [
+    {"name_school":"SMK NU Al-Hidayah Ngimbang", "year_in":"2012", "year_out":"2015", null},
+  ];
+obj.skills =  [
+    {"name_skill":"Internet Marketing", "level":"advanced"},
+    {"name_skill":"Coding", "level":"beginner"},
+  ];
+obj.interest_in_coding = true;
+
+json = JSON.stringify(obj, '', '\t');
+console.log(json);
