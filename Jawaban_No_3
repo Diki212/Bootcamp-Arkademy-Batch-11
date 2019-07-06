@@ -1,0 +1,18 @@
+<?php
+$a = 12; //Variabel
+
+for($i=1;$i>=1;$i++){
+  if ($a % 2 == 0) {
+    $hasil = $a / 2;
+    echo " => ".$hasil;
+
+    $hasil = $a;
+  } elseif ($a % 2 == 1) {
+    $hasil = ($a * 3) + 1;
+    echo " => ".$hasil;
+
+    $hasil = $a;
+  }
+  $a++;
+}
+?>
