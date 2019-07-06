@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
 		$password = test_input($_POST["password"]);
 // check Password Valid atau Tidak
 		if (!preg_match("/^[@]{1}[a-zA-Z0-9_-#]{8}$/",$password)) {
-			$passError = " * Password kombinasi dari huruf kecil, huruf besar, angka, dan karakter spesial minimal satu simbol dan harus terdapat simbol “#”. Dengan panjang minimal 8 karakter"; 
+			$passError = " * Password kombinasi dari huruf kecil, huruf besar, angka, dan karakter spesial minimal satu simbol dan harus terdapat simbol “@”. Dengan panjang minimal 8 karakter"; 
 		}
 	}
 }
