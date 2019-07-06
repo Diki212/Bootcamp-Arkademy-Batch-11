@@ -1,0 +1,17 @@
+<?php
+$nama_barang='Mie Instan';
+$uang = 35000;
+$tgl = 24;
+
+if ($tgl % 2 == 0){
+    $bonus=(10*1);
+}
+else if ($tgl % 2 == 1){
+    $bonus=(5*1);
+}
+
+echo "Nama Barang = ".$nama_barang."<br>";
+echo "Tanggal Pembeli = ".$tgl."<br>";
+echo "Uang = ".$uang."<br>";
+echo "Bonus = ".$bonus."<br>";
+?>
